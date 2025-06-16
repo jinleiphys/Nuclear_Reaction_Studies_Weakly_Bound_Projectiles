@@ -1,53 +1,205 @@
 ---
 # You can also start simply with 'default'
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+theme: hep
+preTitle: "Nuclear Reaction Studies Using Weakly Bound Projectiles: Structure and Dynamics"
+authors:  # First author should be the presenter
+  - Jin Lei: ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."] 
+meeting: "xXX"
 
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
-class: text-center
-# https://sli.dev/features/drawing
-drawings:
-  persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
-mdc: true
-# open graph
-# seoMeta:
-#  ogImage: https://cover.sli.dev
----
-
-# Welcome to Slidev
-
-Presentation slides for developers
-
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
-</div>
-
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
-transition: fade-out
+
+
+<!-- <img id="ATLAS" src="/logo/tongji.jpeg"> </img> -->
+
+<style scoped>
+#ATLAS {
+  width: 180px;
+  position: absolute;
+  right: 3%;
+  bottom: 4%;
+  /* background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 15%,rgb(72, 97, 107) 50%); */
+}
+</style>
+
+---
+layout: pageBar
+level: 
+---
+
+# Contents
+
+
+<div class="text-3xl leading-loose">
+
+- <span class="text-blue-700">Introduction</span>
+- <span class="text-blue-700">The Lagrangian</span>
+- <span class="text-blue-700">2-D Plotly Examples</span>
+
+</div>
+
+---
+layout: pageBar
+---
+
+# Nuclear Reaction: use light weakly bound projectiles
+
+<div class="grid grid-cols-2 gap-6 h-96">
+  <!-- Left half: Large Chart of Nuclides -->
+  <div class="text-center">
+    <img src="/pics/chart_nucl.png" class="w-full h-full object-contain mb-2">
+  </div>
+  
+  <!-- Right half: Other images stacked -->
+  <div class="grid grid-rows-2 gap-4">
+    <div v-click>
+      <div class="text-center">
+        <img src="/pics/incomplete_fusion.png" class="w-full h-40 object-contain mb-1">
+        <p class="text-sm">Incomplete fusion of weakly bound projectiles</p>
+      </div>
+    </div>
+    <div v-click>
+      <div class="text-center">
+        <img src="/pics/Halo_Nucleus.png" class="w-full h-40 object-contain mb-1">
+        <p class="text-sm">Properties of halo nuclei</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+layout: pageBar
+---
+
+# Navigation
+
+Hover on the bottom-left corner to see the navigation's controls panel
+
+## Keyboard Shortcuts
+
+|     |     |
+| --- | --- |
+| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
+
+---
+layout: pageBar
+---
+
+# The Lagrangian
+
+The mathematical formulation of the Standard Model of particle physics
+
+
+The Standard Model of particle physics is a **quantum field theory**. 
+Therefore, its <span style="color:#ac1944;">fundamental elements are quantum fields</span> and the excitations of these fields are *identified* as **particles**.
+All information is encoded in a compact description—the so-called ‘Lagrangian’ ( $\mathcal{L}$ ), which is an extremely compact notation.
+
+In the physics classroom, however, it is very difficult to achieve a deep-level understanding because the required mathematics skills go far beyond high-school level. Hence, we will only treat the ultra-short Lagrangian as below:
+$$
+\mathcal{L} = \color{#9d6fa5}{ -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} } 
+              + \color{#c90024}{ i\bar{\psi} {\mathcal{D}}\!\!\!\!/ \psi }
+              + \mathrm{h.c.} 
+              + \color{#296b4c}{ \psi_i y_{ij} \psi_j \phi }
+              + \mathrm{h.c.} 
+              + \color{#4d45cc}{ |\mathcal{D}_{\mu} \phi |{ }^2 }
+              - \color{#fe7b26}{ V(\phi) }
+$$
+
+<div class="grid grid-cols-3 gap-5 items-center justify-center">
+
+<div class="col-span-2">
+
+> - <span style="color: #9d6fa5"> $F_{\mu\nu} F^{\mu\nu}$: This term is the scalar product of the field strength tensor $F_{\mu\nu}$ containing the mathematical encoding of all interaction particles except the Higgs boson. It contains the necessary formulation for these particles to even exist, and describes how they interact with each other. </span>
+> - <span style="color: #c90024"> $i\bar{\psi} {\mathcal{D}}\!\!\!\!/ \psi$: This term describes how interaction particles interact with matter particles. The fields $\psi$ and $\bar{\psi}$ describe (anti)quarks and (anti)leptons. </span>
+> - <span style="color: #296b4c"> $\psi_i y_{ij} \psi_j \phi$: This term describes how matter particles couple to the Brout–Englert–Higgs field $\psi$ and thereby obtain mass. </span>
+> - <span style="color: #4d45cc"> $|\mathcal{D}_{\mu} \phi |{ }^2$: This term describes how the interaction particles couple to the BEH field. This applies only to the interaction particles of the weak interaction ($W^{\pm}, Z$), which thereby obtain their mass. </span>
+> - <span style="color: #fe7b26"> $V(\phi)$: This term describes the potential of the BEH field.  </span>
+
+</div>
+<div class="col-span-1">
+
+<Transform :scale="1.0">
+<img src="https://www.quantumdiaries.org/wp-content/uploads/2011/06/cernmug.jpg"/>
+</Transform>
+
+</div>
+
+</div>
+
+<style scoped>
+.slidev-layout blockquote {
+  font-size: 1rem;
+}
+
+li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+</style>
+
+---
+layout: pageBar
+---
+
+# 2-D Plotly Examples
+
+Two 2D plots for display
+
+Try to interact with the graphs 🥰
+
+<div grid="~ cols-2 gap-20">
+
+<Transform :scale="0.75">
+<PlotlyGraph filePath="Graph/plotly1.json" tickFontSize="18" graphWidth="800"/>
+</Transform>
+
+<Transform :scale="0.75">
+<PlotlyGraph filePath="Graph/plotly1.json" tickFontSize="18" graphWidth="800"/>
+</Transform>
+
+</div>
+
+
+---
+layout: pageBar
+---
+
+# 3-D Plotly Examples
+
+Two 3D plots for display
+
+Try to interact with the graphs 🥰
+
+<div grid="~ cols-2 gap-20">
+
+<Transform :scale="0.65">
+<PlotlyGraph filePath="Graph/plotly2.json" graphWidth="900"/>
+</Transform>
+
+<Transform :scale="0.65">
+<PlotlyGraph filePath="Graph/plotly3.json" graphWidth="900"/>
+</Transform>
+
+</div>
+
+
+---
+layout: center
+class: "text-center"
+---
+
+# Learn More
+
+[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+
+---
+layout: pageBar
 ---
 
 # What is Slidev?
@@ -117,25 +269,6 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 ---
 layout: two-cols
 layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
 ---
 
 # Code
