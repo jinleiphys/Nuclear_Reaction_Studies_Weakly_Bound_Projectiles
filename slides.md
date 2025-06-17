@@ -6,7 +6,6 @@ authors:  # First author should be the presenter
   - Jin Lei: ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."] 
 meeting: "xXX"
 
-
 ---
 
 
@@ -25,7 +24,7 @@ meeting: "xXX"
 
 ---
 layout: pageBar
-level: 
+transition: fade-out
 ---
 
 # Nuclear Reactions: use light weakly bound projectiles
@@ -55,6 +54,7 @@ level:
 
 ---
 layout: pageBar
+transition: fade-out
 ---
 
 # What are Nuclear Reactions?
@@ -89,6 +89,7 @@ layout: pageBar
 
 ---
 layout: pageBar
+transition: fade-out
 ---
 
 # Outline
@@ -104,34 +105,38 @@ layout: pageBar
 
 ---
 layout: pageBar
+transition: fade-out
 ---
 
 # Modeling the Elastic Scattering in two-body model 
 Take the use of effective interactions
 
-<v-clicks>
-
 - **Elastic scattering** occurs when two particles interact and separate without any change in their internal energy states or particle identities
+<v-click>
 
 - The elastic scattering can be described by a **two-body model** with an effective interaction
 
 - We developed a new computer code, **COLOSS**, using the complex scaling method to compute elastic scattering cross sections
   
   *J. Liu, **JL**, Z. Ren, Computer Physics Communications* **311** (2025) 109568
+</v-click>
+<v-click>
 
 - **Schrödinger equation:**
   $$\left[-\frac{\hbar^2}{2 \mu} \frac{\mathrm{d}^2}{\mathrm{d} r^2}+\frac{\hbar^2}{2 \mu} \frac{\ell(\ell+1)}{r^2}+U_N(r)\right] \psi_{\ell}(r)=E \psi_{\ell}(r)$$
 
 - **Wave function separation:**
   $$\psi_{\ell}(r)=e^{i \sigma_{\ell}} F_{\ell}(\eta, k r)+\psi_{\ell}^{\mathrm{sc}}(r)$$
+</v-click>
+<v-click> 
 
 - **Complex scaling transformation:**
 $$\left[E-H^\theta(r)\right] \psi_{\ell}^{\mathrm{sc}, \theta}(r)=e^{i \theta / 2} e^{i \sigma_{\ell}} \tilde{U}_N\left(r e^{i \theta}\right) F_{\ell}\left(\eta, k r e^{i \theta}\right)$$
-
-</v-clicks>
+</v-click>
 
 ---
 layout: pageBar
+transition: fade-out
 ---
 
 # Modeling the Elastic Scattering in two-body model 
@@ -159,6 +164,14 @@ Take the use of effective interactions
 
 ---
 layout: pageBar
+transition: fade-out
+---
+
+
+
+---
+layout: pageBar
+transition: fade-out
 ---
 
 # Navigation
