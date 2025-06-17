@@ -405,3 +405,38 @@ $$
 
 - We have developed a new computer code, the Shanghai Tongji Advanced Reaction Solver (**STARS**), to solve the CDCC equations. Unlike the well-known code **FRESCO**, **STARS** employs the **R-matrix method**, solving **linear equations** rather than differential equations. It naturally incorporates **nonlocal potentials** and is easily extensible to methods such as **eigenvector continuation**. <span style="color:#0076BA;">*H. Liu, **JL**, Z. Ren, in preparation for submission*.</span>
 </v-click>
+
+---
+layout: pageBar
+---
+
+# Breakup reactions of weakly bound projectiles
+Exclusive and inclusive breakup reactions
+
+Take $^6$Li as example
+
+Exclusive breakup:
+<div class="grid grid-rows-1 gap-8 h-full items-center justify-center">
+  <div class="text-center">
+    <img src="/pics/dA_chans_exclusive.png" alt="Exclusive breakup channels" class="w-180 h-120 object-contain mx-auto">
+  </div>
+  
+</div>
+
+---
+layout: pageBar
+---
+
+# Breakup reactions of weakly bound projectiles
+Exclusive and inclusive breakup reactions
+
+Take $^6$Li as example
+
+Inclusive breakup:
+
+
+<div class="grid grid-rows-1 gap-8 h-full items-center justify-center">  
+  <div class="text-center">
+    <img src="/pics/dA_chans_inclusive.png" alt="Inclusive breakup channels" class="w-280 h-120 object-contain mx-auto">
+  </div>
+</div>
