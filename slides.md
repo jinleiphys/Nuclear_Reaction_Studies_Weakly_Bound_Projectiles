@@ -262,6 +262,7 @@ $n$+$^{40}$Ca elastic scattering
 <img src="/pics/n40Ca.png" alt="Description" class="w-180 h-80 object-contain">
 </div>
 <div class="col-span-1">
+
 - Emulated results are accurate
 
 - Reduced basis size is small
@@ -292,3 +293,84 @@ More details can be found in: <span style="color:#FF2600;">J. Liu, **JL**, Z. Re
 ---
 layout: pageBar
 ---
+
+# Modeling the Reaction in three-body model 
+More degree of freedom invloved, can be used to study transfer and breakup reactions
+
+- Solving the **three-body** Schrodinger equation：**two-body** projectile with inert cores on inert target (take d+A system as an example)
+
+$$E|\Psi\rangle =H |\Psi\rangle   \ \ \ \ \ \color{#FF2600}{\to}   \ \ \ \ \ \color{#000000}{H = H_0 + V_{np} + U_{pA} + U_{nA}}$$  
+
+- Faddeev equations are the rigourous way to solve the three-body problem. L. D. Faddeev, Zh. Eksp. Teor. Fiz. 39, 1459 (1960).
+
+- Most commonly solved in the momentum space and well known as **Faddeev-AGS** equations. E. O. Alt, P. Grassberger, and W. Sandhas., Nucl.Phys. B 2 (1967) 167
+
+<div class="grid grid-cols-2 gap-5 items-center justify-center">
+<div class="col-span-1 text-center">
+<img src="/pics/Faddeev-AGS.png" alt="Description" class="w-180 h-80 object-contain">
+</div>
+<div class="col-span-1 text-center">
+<v-click>
+
+$$U^{ij}=\bar\delta_{ij} G_0^{-1}(E)+\sum_k\bar\delta_{ik}\color{#FF2600}{t_k}\color{#000000}{G_0(E)U^{kj}}$$
+
+$$U^{0j}=G_0^{-1}(E)+\sum_k \color{#FF2600}{t_k}\color{#000000}{G_0 U^{kj}}$$
+</v-click>
+
+<v-click>
+
+<span style="color:#FF2600;">two body t-matrix: $t_k=v_k+v_kg_ot_k$</span>
+</v-click>
+
+<v-click>
+
+Observables: $\sigma_{i\gets j} \propto |\langle \Phi_i|U^{ij}|\Phi_j \rangle |^2$
+</v-click>
+
+More details can be found in: <span style="color:#0076BA;">L. Hlophe, **JL** et al, Phys. Rev. C 96, 064003 (2017), Phys. Rev. C 100, 034609 (2019), and **JL**, L. Hlophe et al, Phys. Rev. C 98, 051001 (2018)</span>
+
+</div>
+</div>
+
+---
+layout: pageBar
+---
+
+# Modeling the Reaction in three-body model 
+More degree of freedom invloved, can be used to study transfer and breakup reactions
+
+- Solving the **three-body** Schrodinger equation：**two-body** projectile with inert cores on inert target (take d+A system as an example)
+
+$$E|\Psi\rangle =H |\Psi\rangle   \ \ \ \ \ \color{#FF2600}{\to}   \ \ \ \ \ \color{#000000}{H = H_0 + V_{np} + U_{pA} + U_{nA}}$$  
+
+- Faddeev equations are the rigourous way to solve the three-body problem. L. D. Faddeev, Zh. Eksp. Teor. Fiz. 39, 1459 (1960).
+
+- Can also be solved in the coordinate space, e.g. **Faddeev-Merkuriev** equations. Naturally suited for Coulomb interactions. 
+
+<v-click>
+
+$$
+\Psi=\psi_{ij}+\psi_{jk} +\psi_{ki}, 
+$$
+</v-click>
+<v-click>
+
+$$
+\begin{align}
+(E-H_0-V_{ij}-W_k) \psi_{ij} &= V_{ij}^S (\psi_{jk}+\psi_{ki}), \nonumber \\
+(E-H_0-V_{jk}-W_i) \psi_{jk} &= V_{jk}^S (\psi_{ij}+\psi_{ki}),\nonumber \\
+(E-H_0-V_{ki}-W_j) \psi_{ki} &= V_{ki}^S (\psi_{ij}+\psi_{jk}),\nonumber
+\end{align}
+$$
+</v-click>
+
+<v-click>
+
+- By the **complex scaling method**, one can simutaneously solve the bound and scattering states in the same framework.
+</v-click>
+<v-click>
+
+- Preparing a new computer code to solve the Faddeev-Merkuriev equations for identical particles, including bound and scattering states. The code, written in Julia, is named **Scattering with Identical Faddeev Three-Body Solver** (SWIFT.jl). <span style="color:#0076BA;"> *JL, prepraing for submission*.</span>
+
+- For those interested, please have a look at the code: <a href=https://github.com/jinleiphys/swift.jl>SWIFT.jl</a>
+</v-click>
