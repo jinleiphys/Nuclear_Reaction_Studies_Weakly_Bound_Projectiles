@@ -72,6 +72,61 @@ layout: pageBar
 layout: pageBar
 ---
 
+# What is Nuclear Reaction?
+
+<div class="grid grid-cols-2 gap-6 h-96">
+  <div class="text-center">
+    <img src="/pics/reaction.png" class="w-full h-full object-contain mb-2">
+  </div>
+  <div class="grid grid-rows-4 gap-4">
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #EA33F0;">Extract optical potential, rms radius, density distributions</p>
+      </div>
+    </div>
+        <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #EA33F0;">Extract spin, parity, spectroscopic factors example: <sup>132</sup>Sn(d,p)<sup>133</sup>Sn</p>
+      </div>
+    </div>
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #EA33F0;">Study nuclear dynamics properties of halo nuclei</p>
+      </div>
+    </div>
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #4A9CF7;">Provide energy for star burning synthesis of elements</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+layout: pageBar
+---
+
+# Outline
+
+<div class="h-full flex flex-col justify-center">
+  <ul class="text-3xl space-y-4">
+    <li style="color: grey;">• Introduction</li>
+    <li>• Modeling the Nuclear Reaction in Few-body Models</li>
+    <li>• Computing the Breakup Cross Sections</li>
+    <li>• Conclusions</li>
+  </ul>
+</div>
+
+---
+layout: pageBar
+---
+
+
+
+---
+layout: pageBar
+---
+
 # Navigation
 
 Hover on the bottom-left corner to see the navigation's controls panel
