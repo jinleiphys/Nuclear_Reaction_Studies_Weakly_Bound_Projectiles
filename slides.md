@@ -28,22 +28,7 @@ layout: pageBar
 level: 
 ---
 
-# Contents
-
-
-<div class="text-3xl leading-loose">
-
-- <span class="text-blue-700">Introduction</span>
-- <span class="text-blue-700">The Lagrangian</span>
-- <span class="text-blue-700">2-D Plotly Examples</span>
-
-</div>
-
----
-layout: pageBar
----
-
-# Nuclear Reaction: use light weakly bound projectiles
+# Nuclear Reactions: use light weakly bound projectiles
 
 <div class="grid grid-cols-2 gap-6 h-96">
   <!-- Left half: Large Chart of Nuclides -->
@@ -72,7 +57,7 @@ layout: pageBar
 layout: pageBar
 ---
 
-# What is Nuclear Reaction?
+# What are Nuclear Reactions?
 
 <div class="grid grid-cols-2 gap-6 h-96">
   <div class="text-center">
@@ -110,10 +95,10 @@ layout: pageBar
 
 <div class="h-full flex flex-col justify-center">
   <ul class="text-3xl space-y-4">
-    <li style="color: grey;">• Introduction</li>
-    <li>• Modeling the Nuclear Reaction in Few-body Models</li>
-    <li>• Computing the Breakup Cross Sections</li>
-    <li>• Conclusions</li>
+    <li style="color: grey;">Introduction</li>
+    <li>Modeling the Nuclear Reactions in Few-body Models</li>
+    <li>Computing the Breakup Cross Sections</li>
+    <li>Conclusions</li>
   </ul>
 </div>
 
@@ -121,7 +106,56 @@ layout: pageBar
 layout: pageBar
 ---
 
+# Modeling the Elastic Scattering in two-body model 
+Take the use of effective interactions
 
+<v-clicks>
+
+- **Elastic scattering** occurs when two particles interact and separate without any change in their internal energy states or particle identities
+
+- The elastic scattering can be described by a **two-body model** with an effective interaction
+
+- We developed a new computer code, **COLOSS**, using the complex scaling method to compute elastic scattering cross sections
+  
+  *J. Liu, **JL**, Z. Ren, Computer Physics Communications* **311** (2025) 109568
+
+- **Schrödinger equation:**
+  $$\left[-\frac{\hbar^2}{2 \mu} \frac{\mathrm{d}^2}{\mathrm{d} r^2}+\frac{\hbar^2}{2 \mu} \frac{\ell(\ell+1)}{r^2}+U_N(r)\right] \psi_{\ell}(r)=E \psi_{\ell}(r)$$
+
+- **Wave function separation:**
+  $$\psi_{\ell}(r)=e^{i \sigma_{\ell}} F_{\ell}(\eta, k r)+\psi_{\ell}^{\mathrm{sc}}(r)$$
+
+- **Complex scaling transformation:**
+$$\left[E-H^\theta(r)\right] \psi_{\ell}^{\mathrm{sc}, \theta}(r)=e^{i \theta / 2} e^{i \sigma_{\ell}} \tilde{U}_N\left(r e^{i \theta}\right) F_{\ell}\left(\eta, k r e^{i \theta}\right)$$
+
+</v-clicks>
+
+---
+layout: pageBar
+---
+
+# Modeling the Elastic Scattering in two-body model 
+Take the use of effective interactions
+- **Wave function expansion:**
+  $$\psi_{\ell}^{\mathrm{sc}, \theta}(r)=\sum_{j=1}^{N_r} c_j g_j(r)$$
+
+- **Linear equation system:**
+  $$\sum_{j=1}^{N_r}\left[E \mathbf{N}_{ij}-\mathbf{H}_{ij}^\theta\right] c_j= b_i^\theta$$
+
+- **Results:**
+<div class="flex justify-center gap-6 mt-8">
+  <v-click>
+    <img src="/pics/d93Nb.png" alt="d + 93Nb scattering" class="w-72 h-48 object-contain">
+  </v-click>
+  
+  <v-click>
+    <img src="/pics/6Li208Pb.png" alt="6Li + 208Pb scattering" class="w-72 h-48 object-contain">
+  </v-click>
+  
+  <v-click>
+    <img src="/pics/n56Fe.png" alt="n + 56Fe scattering" class="w-72 h-48 object-contain">
+  </v-click>
+</div>
 
 ---
 layout: pageBar
@@ -295,8 +329,7 @@ Here is another comment.
 -->
 
 ---
-transition: slide-up
-level: 2
+layout: pageBar
 ---
 
 # Navigation
