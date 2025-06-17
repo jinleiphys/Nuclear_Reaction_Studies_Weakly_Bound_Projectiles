@@ -370,7 +370,38 @@ $$
 </v-click>
 <v-click>
 
-- Preparing a new computer code to solve the Faddeev-Merkuriev equations for identical particles, including bound and scattering states. The code, written in Julia, is named **Scattering with Identical Faddeev Three-Body Solver** (SWIFT.jl). <span style="color:#0076BA;"> *JL, prepraing for submission*.</span>
+- Preparing a new computer code to solve the Faddeev-Merkuriev equations for identical particles, including bound and scattering states. The code, written in Julia, is named **Scattering with Identical Faddeev Three-Body Solver** (SWIFT.jl). <span style="color:#0076BA;"> ***JL**, prepraing for submission*.</span>
 
 - For those interested, please have a look at the code: <a href=https://github.com/jinleiphys/swift.jl>SWIFT.jl</a>
+</v-click>
+
+---
+layout: pageBar
+---
+
+# Modeling the Reaction in three-body model 
+More degree of freedom invloved, can be used to study transfer and breakup reactions
+
+- Solving the **three-body** Schrodinger equation：**two-body** projectile with inert cores on inert target (take d+A system as an example)
+
+$$E|\Psi\rangle =H |\Psi\rangle   \ \ \ \ \ \color{#FF2600}{\to}   \ \ \ \ \ \color{#000000}{H = H_0 + V_{np} + U_{pA} + U_{nA}}$$  
+
+- Faddeev equations are the rigourous way to solve the three-body problem. L. D. Faddeev, Zh. Eksp. Teor. Fiz. 39, 1459 (1960).
+
+- However, the **Faddeev equations** are computationally intensive and thus unsuitable for weakly bound projectiles, such as $^{11}$Be, $^{6}$Li, and $^{8}$B.
+
+<v-click>
+
+- The continuum discretized coupled channels (**CDCC**) method is a widely used alternative. It is based on the expansion of the continuum states in a discrete basis, which allows for the treatment of weakly bound projectiles.
+</v-click>
+<v-click>
+
+$$
+\left(E-\varepsilon_n-T_{a A}(R \alpha)\right) \langle\phi_{b x}^n R \alpha| \Psi^{j_{\mathrm{jin}}(+)} \rangle - \sum_{\alpha^{\prime}n'} \langle \phi_{b x}^n R \alpha| U_{pA}+U_{nA}| \phi_{b x}^{n'} R \alpha' \rangle \langle\phi_{b x}^{n^{\prime}} R \alpha^{\prime}| \Psi^{j_{\mathrm{in}}(+)} \rangle = 0,
+$$
+</v-click>
+
+<v-click>
+
+- We have developed a new computer code, the Shanghai Tongji Advanced Reaction Solver (**STARS**), to solve the CDCC equations. Unlike the well-known code **FRESCO**, **STARS** employs the **R-matrix method**, solving **linear equations** rather than differential equations. It naturally incorporates **nonlocal potentials** and is easily extensible to methods such as **eigenvector continuation**. <span style="color:#0076BA;">*H. Liu, **JL**, Z. Ren, in preparation for submission*.</span>
 </v-click>
