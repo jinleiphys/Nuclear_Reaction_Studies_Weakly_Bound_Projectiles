@@ -112,7 +112,7 @@ Take the use of effective interactions
 
 - The elastic scattering can be described by a **two-body model** with an effective interaction
 
-- We developed a new computer code, **COLOSS**, using the complex scaling method to compute elastic scattering cross sections
+- We developed a new computer code, **C**omplex-scaled **O**ptical and cou**LO**mb **S**cattering **S**olver (**COLOSS**), using the complex scaling method to compute elastic scattering cross sections
   
   *J. Liu, **JL**, Z. Ren, Computer Physics Communications* **311** (2025) 109568
 </v-click>
@@ -370,7 +370,7 @@ $$
 </v-click>
 <v-click>
 
-- Preparing a new computer code to solve the Faddeev-Merkuriev equations for identical particles, including bound and scattering states. The code, written in Julia, is named **Scattering with Identical Faddeev Three-Body Solver** (SWIFT.jl). <span style="color:#0076BA;"> ***JL**, prepraing for submission*.</span>
+- Preparing a new computer code to solve the Faddeev-Merkuriev equations for identical particles, including bound and scattering states. The code, written in Julia, is named **S**cattering **W**ith **I**dentical **F**addeev **T**hree-Body Solver (**SWIFT.jl**). <span style="color:#0076BA;"> ***JL**, preparing for submission*.</span>
 
 - For those interested, please have a look at the code: <a href=https://github.com/jinleiphys/swift.jl>SWIFT.jl</a>
 </v-click>
@@ -403,7 +403,7 @@ $$
 
 <v-click>
 
-- We have developed a new computer code, the Shanghai Tongji Advanced Reaction Solver (**STARS**), to solve the CDCC equations. Unlike the well-known code **FRESCO**, **STARS** employs the **R-matrix method**, solving **linear equations** rather than differential equations. It naturally incorporates **nonlocal potentials** and is easily extensible to methods such as **eigenvector continuation**. <span style="color:#0076BA;">*H. Liu, **JL**, Z. Ren, in preparation for submission*.</span>
+- We have developed a new computer code, the **S**hanghai **T**ongji **A**dvanced **R**eaction **S**olver (**STARS**), to solve the CDCC equations. Unlike the well-known code **FRESCO**, **STARS** employs the **R-matrix method**, solving **linear equations** rather than differential equations. It naturally incorporates **nonlocal potentials** and is easily extensible to methods such as **eigenvector continuation**. <span style="color:#0076BA;">*H. Liu, **JL**, Z. Ren, in preparation for submission*.</span>
 </v-click>
 
 ---
@@ -440,3 +440,87 @@ Inclusive breakup:
     <img src="/pics/dA_chans_inclusive.png" alt="Inclusive breakup channels" class="w-280 h-120 object-contain mx-auto">
   </div>
 </div>
+
+---
+layout: pageBar
+---
+
+# Breakup reactions of weakly bound projectiles
+Experimental examples 
+
+<div class="grid grid-cols-2 grid-rows-3 gap-4 h-4/5 w-full p-4">
+  
+  <!-- 第一张图片：占用2行1列 -->
+  <div class="row-span-2 col-start-1 flex items-center justify-center">
+    <img src="/pics/Li6inclusive.png" class="w-180 h-80 object-contain" />
+  </div>
+  
+  <!-- 第二张图片：占用2行1列 -->
+  <v-click>
+  <div class="row-span-2 col-start-2 flex items-center justify-center">
+    <img src="/pics/surrogate.png" class="w-180 h-80 object-contain" />
+  </div>
+  </v-click>
+  
+  <!-- 第三张图片：占用1行1列 -->
+  <v-click>
+  <div class="row-start-3 col-start-1 flex items-center justify-center">
+    <img src="/pics/knockout.png" class="w-180 h-36 object-contain" />
+  </div>
+
+
+  <!-- 文字内容：占用1行1列 -->
+  <div class="row-start-3 col-start-2 flex flex-col justify-center p-4">
+    <h3 class="text-lg font-bold mb-2">Knockout reaction</h3>
+    <ul class="text-sm space-y-1">
+      <li>• Study the Spectroscopic factor</li>
+      <li>• Current theory based on eikonal approximation (semi-classical)</li>
+      <li>• Fully quantum model is needed</li>
+    </ul>
+  </div>
+  </v-click>
+  
+</div>
+
+---
+layout: pageBar
+---
+
+# The Ichimura-Austern-Vincent (IAV) model
+A fully quantum mechanical model for the breakup reactions
+
+Inclusive breakup :
+
+$$
+a + A \to b + B^* ,
+$$
+where $a = b + x$ represents the two-body structure of the projectile, $B^*$ denotes any possible state of the $x + A$ subsystem. This can include the elastic state, where both $x$ and $A$ are in their ground states, or nonelastic states, which involve particle exchange between $x$ and $A$, inelastic scattering of $x + A$ where either $x$ or $A$ is in an excited state, or the formation of compound nuclei by $x$ and $A$. The former is called **elastic breakup**, and the latter is called **nonelastic breakup**.
+
+<v-click>
+
+In IAV model, the inclusive breakup cross section is given by:
+$$
+\frac{d^2\sigma}{dE_bd\Omega_b}=-\frac{2}{\hbar v_a} \rho_b (E_b) 
+\mathrm{Im} \langle \rho(\vec{k}_b) |G_x^{(+)}| \rho(\vec{k}_b)\rangle
+$$
+
+where the **elastic breakup** double differential cross section is given by:
+$$
+\frac{d^2\sigma}{dE_b d\Omega_b}\Big|_\mathrm{EBU}= \frac{2\pi}{\hbar v_a} \rho_b(E_b)   \rho_x(E_x)   \int \bigg| \langle \chi^{(-)}_{x} (\vec{k}_x) | \rho(\vec{k}_b)  \rangle \bigg|^2
+d\Omega_{k_x}
+$$
+and the **nonelastic breakup** double differential cross section is given by:
+$$
+\frac{d^2\sigma}{dE_b d\Omega_b}\Big|_\mathrm{NEB}= -\frac{2}{\hbar v_a} \rho_b(E_b) 
+\langle G_x^{(+)}\rho(\vec{k}_b) |W_x|  G_x^{(+)}\rho(\vec{k}_b) \rangle
+$$
+</v-click>
+
+---
+layout: pageBar
+---
+
+# Application of the IAV model for deuteron breakup reactions
+A new computer code, **S**cattering **M**odel of **O**ptical **O**perator **Th**eory for **I**chimura-Austern-Vincent **E**quations (**SMOOTHIE**), has been developed to compute the nonelastic breakup cross sections.
+
+The IAV model aligns well with the semi-classical Glauber model with quantum $S$-matrix predictions, both matching experimental data effectively. 
