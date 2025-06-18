@@ -4,7 +4,7 @@ theme: hep
 preTitle: "Nuclear Reaction Studies Using Weakly Bound Projectiles: Structure and Dynamics"
 authors:  # First author should be the presenter
   - Jin Lei: ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."] 
-meeting: "xXX"
+meeting: "International Workshop on Structures and Reactions of Exotic Nuclei, June 24th-26th, 2025, Shanghai, China"
 
 ---
 
@@ -487,10 +487,9 @@ layout: pageBar
 ---
 
 # The Ichimura-Austern-Vincent (IAV) model
-A fully quantum mechanical model for the breakup reactions
+A fully quantum mechanical model for the breakup reactions. (M. Ichimura, N. Austern, and C. M. Vincent, PRC 32, 431 (1985))
 
 Inclusive breakup :
-
 $$
 a + A \to b + B^* ,
 $$
@@ -524,3 +523,38 @@ layout: pageBar
 A new computer code, **S**cattering **M**odel of **O**ptical **O**perator **Th**eory for **I**chimura-Austern-Vincent **E**quations (**SMOOTHIE**), has been developed to compute the nonelastic breakup cross sections.
 
 The IAV model aligns well with the semi-classical Glauber model with quantum $S$-matrix predictions, both matching experimental data effectively. 
+
+More details can be found in *H. Liu, S. Nakayama, **JL**, and Z. Ren, Phys. Rev. C 108, 014617 (2023)*
+<div class="flex justify-center gap-6 mt-8">
+  <v-click>
+    <img src="/pics/Ni56dpxall.png" alt="d + 93Nb scattering" class="w-128 h-98 object-contain">
+  </v-click>
+  
+  <v-click>
+    <img src="/pics/dnx.png" alt="6Li + 208Pb scattering" class="w-128 h-94 object-contain">
+  </v-click>
+  
+  <!-- <v-click>
+    <img src="/pics/n56Fe.png" alt="n + 56Fe scattering" class="w-72 h-48 object-contain">
+  </v-click> -->
+</div>
+
+
+---
+layout: pageBar
+---
+
+# Surface approximation in the IAV model
+Testing the semi-classical perspective using asymptotic $S$-Matrix calculations
+
+- In the Glauber model, the inclusive breakup cross section is typically computed using the $S$-matrix approximation, which assumes that the scattering wave function can be expressed as:
+$$
+u_l(r)  \approx \frac{i}{2}\left [ H^{(-)}_l(r)-S_lH^{(+)}_l(r) \right ]
+$$
+
+<v-click>
+- However, due to the irregularity of this asymptotic form at the origin, we introduce a radial cut-off to the scattering wave functions both in the entrance and the exit channel consistently
+$$
+u_{l_a}(r)=u_{l_b}(r)=0   \qquad r<R_{\mathrm{cut}},
+$$
+</v-click>
