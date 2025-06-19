@@ -5,7 +5,7 @@ preTitle: "Nuclear Reaction Studies Using Weakly Bound Projectiles: Structure an
 authors:  # First author should be the presenter
   - Jin Lei: ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."] 
 meeting: "International Workshop on Structures and Reactions of Exotic Nuclei, June 24th-26th, 2025, Shanghai, China"
-
+preDate: "2025-06-25"
 ---
 
 
@@ -558,3 +558,145 @@ $$
 u_{l_a}(r)=u_{l_b}(r)=0   \qquad r<R_{\mathrm{cut}},
 $$
 </v-click>
+
+<div class="grid grid-cols-3 justify-center gap-6 mt-8">
+ <v-click>
+<div class="col-span-1">
+<img src="/pics/sla100.png" alt="d + 93Nb scattering" class="w-128 h-60 object-contain">
+</div>
+</v-click>
+<v-click>
+<div class="col-span-1">
+<img src="/pics/dsla.png" alt="6Li + 208Pb scattering" class="w-128 h-60 object-contain">
+</div>
+</v-click>
+<v-after>
+<div class="col-span-1 flex items-center justify-center text-center">
+ More details can be found in J. Liu, JL, and Z. Ren, Phys. Rev. C 108, 024606 (2023)
+</div>
+</v-after>
+</div>
+
+---
+layout: pageBar
+---
+
+# Extending the IAV Model with CDCC Wave Functions
+Examining the Validity of the DWBA Form
+
+<!-- - The original IAV model is based on the Distorted Wave Born Approximation (DWBA), which assumes that the breakup wave function can be approximated by a single-particle wave function. However, this assumption may not hold for weakly bound projectiles, where the breakup process involves more complex dynamics.  -->
+
+
+
+- We have extended the IAV model to include the CDCC wave functions, which account for the continuum states of the projectile. This allows for a more accurate description of the breakup process, especially for weakly bound projectiles.
+$$
+\Psi^{3 b(+)} \simeq  \Psi^{\mathrm{CDCC}(+)}\left(\mathbf{r}_a, \mathbf{r}_{b x}\right) 
+=  \sum_i \phi_a^i\left(\mathbf{r}_{b x}\right) \chi_a^{i(+)}\left(\mathbf{r}_a\right) 
+ +\sum_c^N \phi_a^c\left(k_c, \mathbf{r}_{b x}\right) \chi_a^{c(+)}\left(K_c, \mathbf{r}_a\right),
+$$
+
+<v-click>
+
+The term $\color{#FF2600}\phi_a^0\left(\mathbf{r}_{b x}\right) \chi_a^{0(+)}\left(\mathbf{r}_a\right)$ can be consider as the DWBA term, while the left terms take the higher order effects into account.
+</v-click>
+
+<div class="grid grid-cols-3 justify-center gap-6 mt-8">
+ <v-click>
+<div class="col-span-1">
+<img src="/pics/d93nb.png" alt="d + 93Nb scattering" class="w-128 h-60 object-contain">
+</div>
+</v-click>
+<v-click>
+<div class="col-span-1">
+<img src="/pics/li6cdcc_dwba.png" alt="6Li + 208Pb scattering" class="w-128 h-60 object-contain">
+</div>
+</v-click>
+<v-after>
+<div class="col-span-1 flex items-center justify-center text-center">
+ More details can be found in JL, and A.M. Moro, Phys. Rev. Lett. 123, 232501 (2019); Phys. Rev. C 108, 034612 (2023)
+</div>
+</v-after>
+</div>
+
+
+---
+layout: pageBar
+---
+
+# Conclusions 
+
+<div class="h-full flex flex-col justify-center space-y-6">
+
+
+<v-click>
+
+- Developed **COLOSS** code for elastic scattering with complex scaling method
+  - Successfully handles Coulomb + nuclear potentials
+  - Validated against experimental data for various systems
+</v-click>
+
+<v-click>
+
+- Implemented **eigenvector continuation** for efficient emulation of reaction observables
+  - <span style="color:#FF2600;">100× faster</span> than direct calculations
+  - Enables uncertainty quantification in optical potentials
+</v-click>
+
+<v-click>
+
+- Developed **SWIFT.jl** code for identical particle Faddeev calculations in coordinate space using complex scaling
+  - Solves bound and scattering states simultaneously
+</v-click>
+<v-click>
+
+- Created **STARS** code for CDCC calculations using R-matrix method
+  - Natural incorporation of nonlocal potentials
+  - Extensible to advanced methods
+</v-click>
+
+<v-click>
+
+- Developed **SMOOTHIE** code for inclusive breakup reactions using IAV model
+  - Consistent with Glauber model and quantum $S$-matrix predictions
+  - Validated against experimental data for various systems
+  - Extended **IAV model** with CDCC wave functions for inclusive breakup
+</v-click>
+
+</div>
+
+---
+layout: pageBar
+---
+
+# Acknowledgments
+
+<div class="h-full flex flex-col justify-center">
+
+<div class="text-2xl space-y-8">
+
+### Collaborators:
+- **J. Liu** (Tongji University)
+- **H. Liu** (Tongji University)  
+- **Z. Ren** (Tongji University)
+- **A.M. Moro** (Universidad de Sevilla)
+
+
+### Funding Support:
+- National Natural Science Foundation of China
+- Fundamental Research Funds for the Central Universities
+
+<v-click>
+
+<div class="text-center mt-12 text-3xl" style="color:#4A9CF7;">
+Thank you for your attention!
+</div>
+
+
+
+<div class="text-center mt-6 text-xl">
+Questions and discussions are welcome
+</div>
+</v-click>
+</div>
+
+</div>
