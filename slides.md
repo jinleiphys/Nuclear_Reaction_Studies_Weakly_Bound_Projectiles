@@ -603,7 +603,7 @@ The term $\color{#FF2600}\phi_a^0\left(\mathbf{r}_{b x}\right) \chi_a^{0(+)}\lef
 <div class="grid grid-cols-3 justify-center gap-6 mt-8">
  <v-click>
 <div class="col-span-1">
-<img src="/pics/d93nb.png" alt="d + 93Nb scattering" class="w-128 h-60 object-contain">
+<img src="/pics/d93Nb.png" alt="d + 93Nb scattering" class="w-128 h-60 object-contain">
 </div>
 </v-click>
 <v-click>
