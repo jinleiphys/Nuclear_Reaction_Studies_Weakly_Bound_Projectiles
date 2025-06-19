@@ -675,10 +675,10 @@ layout: pageBar
 <div class="text-2xl space-y-8">
 
 ### Collaborators:
-- **J. Liu** (Tongji University)
-- **H. Liu** (Tongji University)  
-- **Z. Ren** (Tongji University)
-- **A.M. Moro** (Universidad de Sevilla)
+- **Junzhe Liu** (Tongji University)
+- **Hao Liu** (Tongji University)  
+- **Zhongzhou Ren** (Tongji University)
+- **Antonio M. Moro** (Universidad de Sevilla)
 
 
 ### Funding Support:
