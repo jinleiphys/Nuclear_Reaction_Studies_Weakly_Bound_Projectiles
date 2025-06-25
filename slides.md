@@ -145,7 +145,7 @@ Take the use of effective interactions
 - **Results:**
 <div class="flex justify-center gap-6 mt-8">
   <v-click>
-    <img src="/pics/d93Nb.png" alt="d + 93Nb scattering" class="w-72 h-48 object-contain">
+    <img src="/pics/d93Nb_el.png" alt="d + 93Nb scattering" class="w-72 h-48 object-contain">
   </v-click>
   
   <v-click>
