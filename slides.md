@@ -700,3 +700,13 @@ Questions and discussions are welcome
 </div>
 
 </div>
+
+--- 
+
+For those who are interested, my presentation can be seen in:
+<div class="flex justify-center mt-8">
+  <img src="/pics/QRcode.png" alt="QR Code to presentation" class="w-64 h-64" />
+</div>
+<div class="text-center mt-4 text-gray-600">
+  Scan the QR code to access the presentation
+</div>
